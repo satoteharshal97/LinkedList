@@ -15,9 +15,9 @@ public class LinkedList<K> {
         if (this.head == null) {
             this.head = newNode;
         } else {
-            InterfaceNode<K> tempNode = this.head;
-            this.head = newNode;
-            this.head.setNext(tempNode);
+            InterfaceNode<K> tempNode = this.tail;
+            this.tail = newNode;
+            this.tail.setNext(tempNode);
         }
     }
 
