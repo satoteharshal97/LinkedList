@@ -4,12 +4,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        LinkedList<Integer> linkedList = new LinkedList<Integer>();
-        MyNode <Integer> firstNode = new MyNode<>(70);
-        MyNode <Integer> secondNode = new MyNode<>(30);
-        MyNode <Integer> thirdNode = new MyNode<>(56);
-        firstNode.setNext(secondNode);
-        secondNode.setNext(thirdNode);
-        System.out.println(firstNode);
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        MyNode<Integer> firstNode = new MyNode<>(56);
+        MyNode<Integer> secondNode = new MyNode<>(30);
+        MyNode<Integer> thirdNode = new MyNode<>(70);
+
+        linkedList.addNode(firstNode);
+        linkedList.addNode(secondNode);
+        linkedList.addNode(thirdNode);
+        linkedList.printMyNodes();
     }
+
+
 }

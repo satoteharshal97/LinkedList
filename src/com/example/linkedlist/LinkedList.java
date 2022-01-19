@@ -3,12 +3,13 @@ package com.example.linkedlist;
 public class LinkedList<K> {
     public InterfaceNode<K> head;
     public InterfaceNode<K> tail;
+    private int size;
 
     public LinkedList() {
 
     }
 
-    public void add(InterfaceNode<K> newNode) {
+    public void addNode(InterfaceNode<K> newNode) {
         if (this.tail == null) {
             this.tail = newNode;
         }
@@ -19,11 +20,10 @@ public class LinkedList<K> {
             this.head = newNode;
             this.head.setNext(tempNode);
         }
+        size++;
     }
-
     public void printMyNodes() {
-        System.out.println("My Node" + head);
+        System.out.println(head);
     }
-
 }
 
