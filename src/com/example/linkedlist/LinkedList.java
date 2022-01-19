@@ -22,6 +22,31 @@ public class LinkedList<K> {
         }
         size++;
     }
+
+    public void appendNode(InterfaceNode<K> newNode) {
+        if (this.tail == null) {
+            this.tail = newNode;
+        }
+        if (this.head == null) {
+            this.head = newNode;
+        } else {
+            InterfaceNode<K> tempNode = this.tail;
+            this.tail = newNode;
+            tempNode.setNext(newNode);
+        }
+        size++;
+    }
+
+    public void insertBetweenNodes(InterfaceNode<K> newNode) {
+
+        int count = (size % 2 == 0) ? (size / 2) : ((size + 1) / 2);
+        InterfaceNode<K> tempNode = this.head;
+        for (int i = 0; i < count; i++) {
+            tempNode.setNext(newNode);
+            newNode.setNext(this.tail);
+        }
+    }
+
     public void printMyNodes() {
         System.out.println(head);
     }

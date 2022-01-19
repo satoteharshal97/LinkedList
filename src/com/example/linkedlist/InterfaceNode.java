@@ -1,9 +1,11 @@
 package com.example.linkedlist;
 
-public interface InterfaceNode <K> {
+public interface InterfaceNode<K> {
     K getKey();
+
     void setKey(K Key);
 
-    InterfaceNode<K>  getNext();
+    InterfaceNode<K> getNext();
+
     void setNext(InterfaceNode<K> next);
 }
