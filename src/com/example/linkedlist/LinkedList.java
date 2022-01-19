@@ -68,6 +68,33 @@ public class LinkedList<K> {
         }
         return tempNode;
     }
+
+    public void searchLinkedList(K key) {
+        InterfaceNode<K> tempNode = this.head;
+        int count = 0;
+        while (tempNode != null) {
+            count++;
+            tempNode = tempNode.getNext();
+            if (tempNode.getKey().equals(key)) {
+                break;
+            }
+        }
+        int option = Integer.parseInt(String.valueOf(count));
+        switch (option) {
+            case 0:
+                System.out.println("Node is present at first node");
+                break;
+            case 1:
+                System.out.println("Node is present at second node");
+                break;
+            case 2:
+                System.out.println("Node is present at third node");
+                break;
+            default:
+                System.out.println("Node is not present in the list");
+        }
+
+    }
     public void printMyNodes() {
         System.out.println(head);
     }
