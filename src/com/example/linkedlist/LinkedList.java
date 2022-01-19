@@ -53,6 +53,21 @@ public class LinkedList<K> {
             this.head = this.head.getNext();
         }
     }
+
+    public InterfaceNode<K> popLast() {
+        InterfaceNode<K> tempNode = this.head;
+        if (this.head == null) {
+            return null;
+        }
+        if (head.getNext() == null) {
+            return null;
+        }
+        while (tempNode.getNext() != null) {
+            tempNode = tempNode.getNext();
+            tempNode.setNext(null);
+        }
+        return tempNode;
+    }
     public void printMyNodes() {
         System.out.println(head);
     }

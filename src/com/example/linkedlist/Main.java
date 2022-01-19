@@ -9,11 +9,11 @@ public class Main {
         MyNode<Integer> secondNode = new MyNode<>(30);
         MyNode<Integer> thirdNode = new MyNode<>(70);
 
-        //Pop method
+        // Pop last element
         linkedList.appendNode(firstNode);
         linkedList.appendNode(secondNode);
         linkedList.appendNode(thirdNode);
-        linkedList.pop();
+        linkedList.popLast();
         linkedList.printMyNodes();
     }
 }
