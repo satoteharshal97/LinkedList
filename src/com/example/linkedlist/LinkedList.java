@@ -47,6 +47,12 @@ public class LinkedList<K> {
         }
     }
 
+    public void pop() {
+        for (int i = 0; i < 1; i++) {
+            InterfaceNode<K> tempNode = this.head;
+            this.head = this.head.getNext();
+        }
+    }
     public void printMyNodes() {
         System.out.println(head);
     }

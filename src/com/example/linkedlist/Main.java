@@ -9,10 +9,11 @@ public class Main {
         MyNode<Integer> secondNode = new MyNode<>(30);
         MyNode<Integer> thirdNode = new MyNode<>(70);
 
-        // Insert between nodes
+        //Pop method
         linkedList.appendNode(firstNode);
+        linkedList.appendNode(secondNode);
         linkedList.appendNode(thirdNode);
-        linkedList.insertBetweenNodes(secondNode);
+        linkedList.pop();
         linkedList.printMyNodes();
     }
 }
